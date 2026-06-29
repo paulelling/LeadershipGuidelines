@@ -361,3 +361,67 @@ ul { list-style: none; }
   opacity: 1 !important;
   font-style: normal !important;
 }
+
+/* ── Author section ── */
+.section--author { background: var(--color-surface); }
+.author-cols {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 4rem;
+  align-items: center;
+}
+.author-photo-frame {
+  border: 1px solid rgba(201,168,76,0.4);
+  box-shadow: 0 8px 40px rgba(0,0,0,0.5);
+  overflow: hidden;
+  max-width: 380px;
+  margin: 0 auto;
+}
+.author-photo-frame img {
+  width: 100%;
+  display: block;
+}
+.author-name {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: var(--color-gold);
+  margin-top: 0.5rem;
+  line-height: 1.1;
+}
+.author-bio {
+  font-size: 0.95rem;
+  color: var(--color-text);
+  opacity: 0.85;
+  margin-bottom: 1.75rem;
+}
+.author-bio em { color: var(--color-gold); font-style: normal; }
+.author-contact { display: flex; flex-direction: column; gap: 0.5rem; }
+.author-email {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--color-gold);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  transition: opacity 0.2s;
+}
+.author-email:hover { opacity: 0.75; }
+.email-icon {
+  width: 18px;
+  height: 18px;
+  color: var(--color-gold);
+  flex-shrink: 0;
+}
+.author-cta-note {
+  font-size: 0.85rem;
+  color: var(--color-muted);
+  font-style: italic;
+}
+
+/* ── Responsive author ── */
+@media (max-width: 767px) {
+  .author-cols {
+    grid-template-columns: 1fr;
+  }
+  .author-photo-frame { max-width: 280px; }
+}
