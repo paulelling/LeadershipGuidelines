@@ -128,6 +128,7 @@ ul { list-style: none; }
   font-weight: 700;
   letter-spacing: 0.2em;
   text-transform: uppercase;
+  font-variant: small-caps;
   color: var(--color-muted);
   transition: color 0.2s;
   padding-bottom: 2px;
