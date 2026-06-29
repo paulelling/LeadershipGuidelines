@@ -425,3 +425,29 @@ ul { list-style: none; }
   }
   .author-photo-frame { max-width: 280px; }
 }
+
+/* ── Footer ── */
+body::after {
+  content: '© Paul Alfred Elling · Leadership Guidelines · paulelling@yahoo.com';
+  display: block;
+  text-align: center;
+  padding: 2rem 5vw;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  color: var(--color-muted);
+  background: var(--color-bg);
+  border-top: 1px solid rgba(201,168,76,0.1);
+}
+
+/* ── Tablet adjustments ── */
+@media (max-width: 1023px) {
+  .hero__title { font-size: clamp(2.5rem, 7vw, 4.5rem); }
+  .book-title  { font-size: clamp(2rem, 5vw, 3rem); }
+}
+
+/* ── Small mobile adjustments ── */
+@media (max-width: 480px) {
+  .hero__books { grid-template-columns: 1fr; max-width: 320px; }
+  .book-card   { padding: 1.25rem; }
+  .typo-panel  { min-height: 200px; }
+}
