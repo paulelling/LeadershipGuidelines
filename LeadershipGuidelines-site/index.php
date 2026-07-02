@@ -1,16 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
+/**
+ * The main template file.
+ *
+ * @package Leadership_Guidelines
+ */
+$theme_uri = get_stylesheet_directory_uri();
+?><!DOCTYPE html>
+<html <?php language_attributes(); ?>>
 <head>
-  <meta charset="UTF-8">
+  <meta charset="<?php bloginfo( 'charset' ); ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Leadership Guidelines — a four-part series on the art and science of leadership by Paul Alfred Elling. Explore Fundamentals, Essential Qualities, The Guiding Light, and Strategy.">
   <title>Leadership Guidelines — Paul Alfred Elling</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="<?php echo esc_url( $theme_uri ); ?>/styles.css">
+  <?php wp_head(); ?>
 </head>
-<body>
+<body <?php body_class(); ?>>
+<?php wp_body_open(); ?>
 
   <nav id="navbar" aria-label="Site navigation">
     <div class="nav__inner">
@@ -91,7 +100,7 @@
 
         <div class="book-col--visual animate-on-scroll delay-1">
           <div class="book-cover-frame">
-            <img src="assets/bookcover1.png" alt="Leadership Guidelines Part I — Fundamentals book cover">
+            <img src="<?php echo esc_url( $theme_uri ); ?>/assets/bookcover1.png" alt="Leadership Guidelines Part I — Fundamentals book cover">
           </div>
         </div>
 
@@ -122,7 +131,7 @@
 
         <div class="book-col--visual animate-on-scroll delay-1">
           <div class="book-cover-frame">
-            <img src="assets/bookcover2.png" alt="Leadership Guidelines Part II — Essential Qualities book cover">
+            <img src="<?php echo esc_url( $theme_uri ); ?>/assets/bookcover2.png" alt="Leadership Guidelines Part II — Essential Qualities book cover">
           </div>
         </div>
 
@@ -152,7 +161,7 @@
 
         <div class="book-col--visual animate-on-scroll delay-1">
           <div class="book-cover-frame">
-            <img src="assets/bookcover3.png" alt="Leadership Guidelines Part III — The Guiding Light book cover">
+            <img src="<?php echo esc_url( $theme_uri ); ?>/assets/bookcover3.png" alt="Leadership Guidelines Part III — The Guiding Light book cover">
           </div>
         </div>
 
@@ -183,7 +192,7 @@
 
         <div class="book-col--visual animate-on-scroll delay-1">
           <div class="book-cover-frame">
-            <img src="assets/bookcover4.png" alt="Leadership Guidelines Part IV — Strategy book cover">
+            <img src="<?php echo esc_url( $theme_uri ); ?>/assets/bookcover4.png" alt="Leadership Guidelines Part IV — Strategy book cover">
           </div>
         </div>
 
@@ -196,7 +205,7 @@
 
         <div class="author-col--photo animate-on-scroll">
           <div class="author-photo-frame">
-            <img src="assets/PaulElling2023.jpg" alt="Paul Alfred Elling, author of Leadership Guidelines">
+            <img src="<?php echo esc_url( $theme_uri ); ?>/assets/PaulElling2023.jpg" alt="Paul Alfred Elling, author of Leadership Guidelines">
           </div>
         </div>
 
@@ -225,6 +234,7 @@
     <p>© Paul Alfred Elling &nbsp;·&nbsp; Leadership Guidelines &nbsp;·&nbsp; <a href="mailto:paulelling@yahoo.com">paulelling@yahoo.com</a></p>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="<?php echo esc_url( $theme_uri ); ?>/script.js"></script>
+  <?php wp_footer(); ?>
 </body>
 </html>
